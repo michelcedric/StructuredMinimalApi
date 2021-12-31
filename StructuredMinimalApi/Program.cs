@@ -1,5 +1,7 @@
 using Microsoft.Extensions.PlatformAbstractions;
-using MinimalApi.Extensions;
+using MinimalApi.Endpoint.Extensions;
+using MinimalApi.Enpoint.Configurations.Extensions;
+using MinimalApi.Enpoint.SwaggerGen.Extensions;
 using StructuredMinimalApi.Configurations;
 using System.Reflection;
 
@@ -7,13 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpoints();
+builder.Configuration.AddConfigurationFile();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-    var fileName = typeof(Program).GetTypeInfo().Assembly.GetName().Name + ".xml";
-    var xmlPath= Path.Combine(basePath, fileName);
+    var fileName = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
+    var xmlPath = Path.ChangeExtension(Path.Combine(basePath, fileName), "xml");
+
     options.IncludeXmlComments(xmlPath);
     options.SwaggerDoc("v1", new()
     {
@@ -21,11 +25,8 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1"
     });
 
-    options.CustomOperationIds(apiDesc =>
-    {
-        var e = apiDesc.ActionDescriptor.RouteValues.TryGetValue("Controller",out var value);
-        return value.Replace("Endpoint", "");
-    });
+    options.CustomEndpointOperationIds();
+
 });
 
 builder.Services.Configure<SampleOptions>(options =>
@@ -39,12 +40,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                                    $"{builder.Environment.ApplicationName} v1"));
+        $"{builder.Environment.ApplicationName} v1"));
 }
 
 app.MapEndpoints();
 
 app.Run();
-
 
 public partial class Program { }

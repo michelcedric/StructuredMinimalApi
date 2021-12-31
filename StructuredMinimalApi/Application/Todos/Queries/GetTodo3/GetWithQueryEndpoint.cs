@@ -1,16 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using MinimalApi;
+﻿using Microsoft.Extensions.Options;
+using MinimalApi.Endpoint;
 using StructuredMinimalApi.Configurations;
 
 namespace StructuredMinimalApi.Application.Todos.Queries.GetTodo3
 {
-    public class GetWithQueryEndpoint : IEndpoint<string, HttpRequest,int>
+    public class GetWithQueryEndpoint : IEndpoint<string, HttpRequest, int>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly SampleOptions _options;
 
-        public GetWithQueryEndpoint(IHttpContextAccessor httpContextAccessor,IOptions<SampleOptions> options)
+        public GetWithQueryEndpoint(IHttpContextAccessor httpContextAccessor, IOptions<SampleOptions> options)
         {
             _httpContextAccessor = httpContextAccessor;
             _options = options.Value;
@@ -21,7 +20,7 @@ namespace StructuredMinimalApi.Application.Todos.Queries.GetTodo3
             app.MapGet("/Todo/3", (HttpRequest request, int page) => Handle(request, page));
         }
 
-        public Task<string> Handle(HttpRequest request,int page)
+        public Task<string> Handle(HttpRequest request, int page)
         {
 
             //int.TryParse(request.Query["page"], out var page);

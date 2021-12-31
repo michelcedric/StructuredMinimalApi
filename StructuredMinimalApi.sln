@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuredMinimalApi", "StructuredMinimalApi\StructuredMinimalApi.csproj", "{4BA03DA9-5C3D-47F0-8C93-6EED6B3BDA8F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalApi", "MinimalApi\MinimalApi.csproj", "{C427FEC2-CFA6-425B-AC16-C5E894E1F76F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalApi.Enpoint", "MinimalApi.Endpoint\MinimalApi.Enpoint.csproj", "{C427FEC2-CFA6-425B-AC16-C5E894E1F76F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuredMinimalApi.IntegrationTests", "StructuredMinimalApi.IntegrationTests\StructuredMinimalApi.IntegrationTests.csproj", "{54909246-23F9-4900-BBC2-35AA64E88C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredMinimalApi.Client.SDK", "StructuredMinimalApi.Client.SDK\StructuredMinimalApi.Client.SDK.csproj", "{33B6418D-9FC1-4F84-AEED-6AB1A52DD02F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuredMinimalApi.Client.SDK", "StructuredMinimalApi.Client.SDK\StructuredMinimalApi.Client.SDK.csproj", "{33B6418D-9FC1-4F84-AEED-6AB1A52DD02F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

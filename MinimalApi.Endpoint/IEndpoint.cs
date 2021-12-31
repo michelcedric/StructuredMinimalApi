@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Routing;
 
-namespace MinimalApi
+namespace MinimalApi.Endpoint
 {
 
     public interface IEndpoint
     {
-        void AddRoute(IEndpointRouteBuilder app);     
+        void AddRoute(IEndpointRouteBuilder app);
     }
 
     public interface IEndpoint<TResult> : IEndpoint
@@ -21,5 +21,10 @@ namespace MinimalApi
     public interface IEndpoint<TResult, TRequest1, TRequest2> : IEndpoint
     {
         Task<TResult> Handle(TRequest1 request1, TRequest2 request2);
+    }
+
+    public interface IEndpoint<TResult, TRequest1, TRequest2, TRequest3> : IEndpoint
+    {
+        Task<TResult> Handle(TRequest1 request1, TRequest2 request2, TRequest3 request3);
     }
 }

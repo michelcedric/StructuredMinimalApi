@@ -1,4 +1,4 @@
-﻿using MinimalApi;
+﻿using MinimalApi.Endpoint;
 
 namespace StructuredMinimalApi.Application.Todos.Queries.GetTodo5
 {
