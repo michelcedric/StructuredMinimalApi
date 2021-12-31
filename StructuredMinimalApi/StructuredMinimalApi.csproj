@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MinimalApi.Endpoint\MinimalApi.Enpoint.csproj" />
+    <ProjectReference Include="..\MinimalApi.Endpoint\MinimalApi.Endpoint.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace MinimalApi.Enpoint.Configurations.Extensions
+namespace MinimalApi.Endpoint.Configurations.Extensions
 {
     public static class ConfigurationManagerExtensions
     {

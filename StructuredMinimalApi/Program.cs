@@ -1,7 +1,7 @@
 using Microsoft.Extensions.PlatformAbstractions;
 using MinimalApi.Endpoint.Extensions;
-using MinimalApi.Enpoint.Configurations.Extensions;
-using MinimalApi.Enpoint.SwaggerGen.Extensions;
+using MinimalApi.Endpoint.Configurations.Extensions;
+using MinimalApi.Endpoint.SwaggerGen.Extensions;
 using StructuredMinimalApi.Configurations;
 using System.Reflection;
 
