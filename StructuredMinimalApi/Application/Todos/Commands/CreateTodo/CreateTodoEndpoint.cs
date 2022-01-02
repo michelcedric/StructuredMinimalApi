@@ -10,11 +10,16 @@ namespace StructuredMinimalApi.Application.Todos.Commands.CreateTodo
     {
         public void AddRoute(IEndpointRouteBuilder app)
         {
-            app.MapPost("/Todo", (CreateTodoCommand command) => Handle(command))
+            app.MapPost("/Todo", (CreateTodoCommand command) => HandleAsync(command))
                 .Produces<Message>(StatusCodes.Status201Created);
         }
 
-        public Task<IResult> Handle(CreateTodoCommand command)
+        /// <summary>
+        /// Endpoint to create a todo
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public Task<IResult> HandleAsync(CreateTodoCommand command)
         {
             var message = new Message
             {

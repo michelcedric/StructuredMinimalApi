@@ -6,10 +6,10 @@ namespace StructuredMinimalApi.Application.Todos.Queries.GetTodo2
     {
         public void AddRoute(IEndpointRouteBuilder app)
         {
-            app.MapGet("/Todo/2/{param1}", (string param1) => Handle(param1));
+            app.MapGet("/Todo/2/{param1}", (string param1) => HandleAsync(param1));
         }
 
-        public Task<string> Handle(string request)
+        public Task<string> HandleAsync(string request)
         {
             return Task.FromResult($"Hello World! 2 {request}");
         }

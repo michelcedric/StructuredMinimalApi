@@ -17,10 +17,10 @@ namespace StructuredMinimalApi.Application.Todos.Queries.GetTodo3
 
         public void AddRoute(IEndpointRouteBuilder app)
         {
-            app.MapGet("/Todo/3", (HttpRequest request, int page) => Handle(request, page));
+            app.MapGet("/Todo/3", (HttpRequest request, int page) => HandleAsync(request, page));
         }
 
-        public Task<string> Handle(HttpRequest request, int page)
+        public Task<string> HandleAsync(HttpRequest request, int page)
         {
 
             //int.TryParse(request.Query["page"], out var page);

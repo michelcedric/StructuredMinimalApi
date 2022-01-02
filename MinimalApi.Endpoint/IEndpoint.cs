@@ -10,21 +10,21 @@ namespace MinimalApi.Endpoint
 
     public interface IEndpoint<TResult> : IEndpoint
     {
-        Task<TResult> Handle();
+        Task<TResult> HandleAsync();
     }
 
     public interface IEndpoint<TResult, TRequest> : IEndpoint
     {
-        Task<TResult> Handle(TRequest request);
+        Task<TResult> HandleAsync(TRequest request);
     }
 
     public interface IEndpoint<TResult, TRequest1, TRequest2> : IEndpoint
     {
-        Task<TResult> Handle(TRequest1 request1, TRequest2 request2);
+        Task<TResult> HandleAsync(TRequest1 request1, TRequest2 request2);
     }
 
     public interface IEndpoint<TResult, TRequest1, TRequest2, TRequest3> : IEndpoint
     {
-        Task<TResult> Handle(TRequest1 request1, TRequest2 request2, TRequest3 request3);
+        Task<TResult> HandleAsync(TRequest1 request1, TRequest2 request2, TRequest3 request3);
     }
 }
