@@ -1,3 +1,4 @@
+[![Build status](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml)
 # StructuredMinimalApi
 The goal of this project it's to define one endpoint (minimal API .net 6) by one file (class)
 ## Program.cs
