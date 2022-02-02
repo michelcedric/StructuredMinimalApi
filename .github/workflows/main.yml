@@ -1,0 +1,23 @@
+name: publish to nuget
+on: workflow_dispatch
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+          
+      # Publish
+      - name: publish on version change        
+        uses: rohith/publish-nuget@v2
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: MinimalApi.Endpoint/MinimalApi.Endpoint.csproj                            
+          TAG_COMMIT: true         
+          TAG_FORMAT: v*     
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}       
