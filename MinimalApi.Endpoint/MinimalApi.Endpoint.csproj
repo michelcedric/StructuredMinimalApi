@@ -9,6 +9,12 @@
     <RepositoryUrl>https://github.com/michelcedric/StructuredMinimalApi</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/michelcedric/StructuredMinimalApi</PackageProjectUrl>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
+    <Version>1.0.2</Version>
+    <Description>Simple package to configure API endpoints as individual classes based on minimal Api (.Net 6)</Description>
+    <PackageTags>minimal-api; minimalapi; api; endpoint</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

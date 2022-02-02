@@ -1,6 +1,8 @@
 [![Build status](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml)
 # StructuredMinimalApi
-The goal of this project it's to define one endpoint (minimal API .net 6) by one file (class)
+The goal of this project it's to show how to use MinimalApi.Endpoint package.  
+It's demontrate how to configure API endpoints as individual classes based on minimal Api (.Net 6)
+
 ## Program.cs
 Use [AddEndpoints](https://github.com/michelcedric/StructuredMinimalApi/blob/master/MinimalApi.Endpoint/Extensions/IServiceCollectionExtensions.cs#L7) extenion method to create each endpoint.
 
@@ -35,6 +37,16 @@ public class GetWithParamEndpoint : IEndpoint<string, string>
         }
     }
 ```
+
+## Projects Using MinimalApi.Endpoint
+
+- [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb): Sample ASP.NET Core reference application, powered by Microsoft
+    - [Use in PublicApi project](https://github.com/dotnet-architecture/eShopOnWeb/tree/main/src/PublicApi): This project demonstrates how to configure endpoints as individual classes    
+
+- [EshopOnVue.js](https://github.com/michelcedric/EshopOnVue.js): Same as EshopOnWeb project in Vue.js
+
+- [StructuredMinimalApi](https://github.com/michelcedric/StructuredMinimalApi/tree/master/StructuredMinimalApi): Sample project to show some usage
+
 
 ## Nuget Package
 A nuget package it's available [here](https://www.nuget.org/packages/MinimalApi.Endpoint/). 
