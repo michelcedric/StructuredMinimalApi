@@ -1,7 +1,7 @@
 [![Build status](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml)
 # StructuredMinimalApi
 The goal of this project it's to show how to use MinimalApi.Endpoint package.  
-It's demontrate how to configure API endpoints as individual classes based on minimal Api (.Net 6)
+It demontrate how to configure API endpoints as individual classes based on minimal Api (.Net 6)
 
 ## Program.cs
 Use [AddEndpoints](https://github.com/michelcedric/StructuredMinimalApi/blob/master/MinimalApi.Endpoint/Extensions/IServiceCollectionExtensions.cs#L7) extenion method to create each endpoint.
