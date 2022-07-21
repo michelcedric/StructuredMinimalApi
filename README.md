@@ -1,4 +1,5 @@
 [![Build status](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/michelcedric/StructuredMinimalApi/actions/workflows/dotnet.yml)
+[![Downloads](https://img.shields.io/nuget/dt/MinimalApi.Endpoint?color=blue&label=Downloads&logo=nuget)](https://www.nuget.org/packages/MinimalApi.Endpoint)
 # StructuredMinimalApi
 The goal of this project it's to show how to use MinimalApi.Endpoint package.  
 It demontrate how to configure API endpoints as individual classes based on minimal Api (.Net 6)
