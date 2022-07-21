@@ -1,4 +1,3 @@
-using Microsoft.Extensions.PlatformAbstractions;
 using MinimalApi.Endpoint.Extensions;
 using MinimalApi.Endpoint.Configurations.Extensions;
 using MinimalApi.Endpoint.SwaggerGen.Extensions;
@@ -14,7 +13,7 @@ builder.Configuration.AddConfigurationFile();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+    var basePath = AppContext.BaseDirectory;
     var fileName = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
     var xmlPath = Path.ChangeExtension(Path.Combine(basePath, fileName), "xml");
 
