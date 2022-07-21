@@ -48,6 +48,8 @@ public class GetWithParamEndpoint : IEndpoint<string, string>
 
 - [StructuredMinimalApi](https://github.com/michelcedric/StructuredMinimalApi/tree/master/StructuredMinimalApi): Sample project to show some usage
 
+- [WebApiBestPractices](https://github.com/ardalis/WebApiBestPractices): Resources related to Ardalis Pluralsight course on this topic.
+
 
 ## Nuget Package
 A nuget package it's available [here](https://www.nuget.org/packages/MinimalApi.Endpoint/). 
