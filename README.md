@@ -22,7 +22,7 @@ app.Run();
 ```
 
 ## Define an endpoint
-To create and define one endpoint, it need to implement [IEndpoint](https://github.com/michelcedric/StructuredMinimalApi/blob/master/MinimalApi.Endpoint/IEndpoint.cs) interface
+To create and define one endpoint, it needs to implement [IEndpoint](https://github.com/michelcedric/StructuredMinimalApi/blob/master/MinimalApi.Endpoint/IEndpoint.cs) interface
 
 ```csharp
 public class GetWithParamEndpoint : IEndpoint<string, string>
@@ -49,7 +49,7 @@ public class GetWithParamEndpoint : IEndpoint<string, string>
 - [StructuredMinimalApi](https://github.com/michelcedric/StructuredMinimalApi/tree/master/StructuredMinimalApi): Sample project to show some usage
 
 - [WebApiBestPractices](https://github.com/ardalis/WebApiBestPractices): Resources related to Ardalis Pluralsight course on this topic.
-    - [Pluralsight : ASP.NET Core 6 Web API: Best Practicest](https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices): Organizing Minimal API demo and best practices.
+    - [Pluralsight : ASP.NET Core 6 Web API: Best Practices](https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices): Organizing Minimal API demo and best practices.
 
 ## Nuget Package
-A nuget package it's available [here](https://www.nuget.org/packages/MinimalApi.Endpoint/). 
+A nuget package is available [here](https://www.nuget.org/packages/MinimalApi.Endpoint/). 
