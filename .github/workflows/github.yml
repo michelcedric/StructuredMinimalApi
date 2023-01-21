@@ -1,0 +1,22 @@
+name: publish to github
+on: workflow_dispatch
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+          
+      - name: Build
+        run: dotnet build -c Release MinimalApi.Endpoint/MinimalApi.Endpoint.csproj
+        
+      - name: Package
+        run: dotnet pack  --no-build -c Release MinimalApi.Endpoint/MinimalApi.Endpoint.csproj -o .
+        
+      - name: Publish
+        run: dotnet nuget push *.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/michelcedric/index.json --skip-duplicate -n      
